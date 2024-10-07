@@ -1,0 +1,38 @@
+# NPM e Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Compilação
+dist/
+out-tsc/
+
+# IDEs e editores de texto
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Testes
+coverage/
+karma-coverage/
+
+# Configurações do ambiente
+src/environments/environment*.ts
+.env
+.env.*
+
+# Angular CLI
+.angular/
