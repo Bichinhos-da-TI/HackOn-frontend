@@ -1,39 +1,31 @@
-name: CI
-
-on:
-  push:
-    branches:
-      - '*'
-  pull_request:
-    branches:
-      - '*'
-
+name: Cypress Tests
+on: [push]
 jobs:
-  build-and-test:
+  cypress-run:
     runs-on: ubuntu-latest
-
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2]
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Configurar Node.js
+      - name: Instalar Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 22
 
-      - name: Instalar dependências
+      - name: Instalar Dependências
         run: npm ci
 
-      - name: Build da aplicação
-        run: npm run build
-
-      - name: Iniciar o servidor
-        run: npm start &
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm run start
+          wait-on: 'http://localhost:4200'
+          record: true
+          parallel: true
         env:
-          PORT: 4200
-
-      - name: Aguardar o servidor estar pronto
-        run: npx wait-on http://localhost:4200
-
-      - name: Executar testes do Cypress
-        run: npx cypress run
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
