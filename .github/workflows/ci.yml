@@ -6,26 +6,34 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        containers: [1, 2]
+        containers: [1]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Instalar Node.js
-        uses: actions/setup-node@v3
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 22
 
+      - name: Configurar pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - name: Instalar Dependências
-        run: npm ci
+        run: pnpm install
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npm run start
+          start: pnpm run start
           wait-on: 'http://localhost:4200'
           record: true
           parallel: true
+          publish-summary: true
+          component: false
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
