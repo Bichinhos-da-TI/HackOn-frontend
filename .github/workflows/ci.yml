@@ -1,18 +1,39 @@
-name: CI Pipeline
+name: CI
 
 on:
   push:
-    branches: [ develop ]
+    branches:
+      - '*'
   pull_request:
-    branches: [ develop ]
+    branches:
+      - '*'
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout do código
         uses: actions/checkout@v3
 
-      - name: Echo
-        run: echo "Operando como esperado"
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Build da aplicação
+        run: npm run build
+
+      - name: Iniciar o servidor
+        run: npm start &
+        env:
+          PORT: 4200
+
+      - name: Aguardar o servidor estar pronto
+        run: npx wait-on http://localhost:4200
+
+      - name: Executar testes do Cypress
+        run: npx cypress run
