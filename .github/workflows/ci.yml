@@ -2,7 +2,7 @@ name: Cypress Tests
 on: [push]
 jobs:
   cypress-run:
-    runs-on: [KVM8, KVM2]
+    runs-on: [self-hosted]
     strategy:
       fail-fast: false
       matrix:
