@@ -3,11 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
-.image_background{
-  clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 100% 100%, 100% 100%, 23.5% 100%, 21% 80%, 10.9% 0);
+@layer components {
+  .image_background {
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 40%,
+      100% 100%,
+      100% 100%,
+      23.5% 100%,
+      21% 80%,
+      10.9% 0
+    );
+  }
 }
 
-body{
+.bodyOverflowBackground {
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.circle_background {
+  clip-path: circle(50.4% at 50% 50%);
 }

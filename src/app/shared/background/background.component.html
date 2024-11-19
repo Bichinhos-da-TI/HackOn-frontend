@@ -1,12 +1,23 @@
-<main class="bg-dark-blue min-h-[98vh] w-[98vw] disable_x_overflow_on_body">
-  <ng-content />
-  <section class="absolute right-[-110px] top-[130px]">
-  <div class="relative overflow-hidden w-[920px] h-[660px] rounded-2xl ">
+<main class="bg-dark-blue min-h-[98vh] w-[98vw] z-auto">
+  <ng-content class="z-20" />
+  <section class="fixed bottom-0 w-full">
+    <div class="relative flex flex-col items-center bottom-0">
+      <div
+        class="absolute h-[65vh] w-full bottom-0 bg-gradient-to-b from-gradient_cor_1 to-gradient_cor_2 -z-20"
+      ></div>
+      <div
+        class="-z-0 absolute bottom-0 rounded-t-[50%] left-[-820px] h-[100vw] w-[100vw] bg-dark-blue circle_background"
+      ></div>
+    </div>
+  </section>
+
+  <section
+    class="fixed overflow-hidden right-[-300px] rounded-2xl top-[200px] w-[1200px] h-[960px]"
+  >
     <img
       src="../../../assets/images/background.png"
       alt="background"
-      class="absolute top-[-40px] left-[-110px] p-0 m-0 h-full w-full image_background"
-    >
-  </div>
-</section>
+      class="absolute top-[-40px] left-[-142px] p-0 m-0 image_background"
+    />
+  </section>
 </main>

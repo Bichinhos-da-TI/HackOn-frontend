@@ -1,11 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-background',
   standalone: true,
   imports: [],
-  templateUrl: './background.component.html'
+  templateUrl: './background.component.html',
 })
-export class BackgroundComponent {
+export class BackgroundComponent implements OnInit {
+  constructor() {}
 
+  ngOnInit(): void {
+    if (typeof document != 'undefined') {
+      // document.body.classList.add('bodyOverflowBackground');
+    }
+  }
 }

@@ -11,12 +11,14 @@ module.exports = {
         "gray-ai": "#D2E3F3",
         gray: "#F5F9FC",
         white: "#FFFFFF",
+        gradient_cor_1: "#3E4A78",
+        gradient_cor_2: "#2B3559",
       },
       fontFamily: {
         jura: ["Jura", "sans-serif"],
       },
       screens: {
-        "xl":"1280px"
+        xl: "1280px",
       },
     },
   },
