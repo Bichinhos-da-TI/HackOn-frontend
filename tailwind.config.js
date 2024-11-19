@@ -13,9 +13,9 @@ module.exports = {
         'white': '#FFFFFF'
       },
       fontFamily: {
-        'jura': ['Jura', 'sans-serif']
+        'jura': ['Jura', 'sans-serif'],
+        'krona': ['Krona One', 'sans-serif']
       }
-
     },
   },
   plugins: [],
