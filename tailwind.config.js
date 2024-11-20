@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+/* eslint-disable padded-blocks */
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
@@ -9,16 +10,16 @@ module.exports = {
         "orange-frog": "#F76B00",
         "yellow-cat": "#F7BC03",
         "gray-ai": "#D2E3F3",
-        gray: "#F5F9FC",
-        white: "#FFFFFF",
-        gradient_cor_1: "#3E4A78",
-        gradient_cor_2: "#2B3559",
+        "gray": "#F5F9FC",
+        "white": "#FFFFFF",
+        "gradient_cor_1": "#3E4A78",
+        "gradient_cor_2": "#2B3559",
       },
       fontFamily: {
-        jura: ["Jura", "sans-serif"],
+        "jura": ["Jura", "sans-serif"],
       },
       screens: {
-        xl: "1280px",
+        "xl": "1280px",
       },
     },
   },
