@@ -1,0 +1,15 @@
+.divLabelInput {
+  display: flex;
+  flex-direction: column;
+}
+
+.divLabelInput label {
+  width: 100%;
+  height: 100%;
+}
+
+.divLabelInput input {
+  background-color: #3e4a78;
+  width: 100%;
+  height: 100%;
+}

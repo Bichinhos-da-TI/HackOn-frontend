@@ -1,0 +1,21 @@
+.cadAdminDiv {
+  color: #ffffff;
+  min-height: 10em;
+  min-width: 10em;
+}
+
+.title {
+  font-size: 2em;
+  display: block;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.subtitle {
+  font-size: 1em;
+}
+
+.subtitle a {
+  cursor: pointer;
+  color: #f7bc03;
+}
