@@ -8,4 +8,10 @@ import { InputWLabelComponent } from '../../../../shared/input-wlabel/input-wlab
   templateUrl: './create-form-admin.component.html',
   styleUrl: './create-form-admin.component.css',
 })
-export class CreateFormAdminComponent {}
+export class CreateFormAdminComponent {
+  name = "";
+
+  onName(value:string){
+    this.name = value;
+  }
+}

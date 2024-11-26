@@ -1,4 +1,4 @@
 <div class="divLabelInput">
   <label [for]="name">{{ name }}</label>
-  <input [name]="name" [type]="type" [ngStyle]="InputStyles" />
+  <input [ngModel]="value" (ngModelChange)="onChangeNameValue($event)" [type]="type" [ngStyle]="InputStyles" />
 </div>

@@ -1,4 +1,5 @@
+<span>{{name}}</span>
 <form class="">
-  <app-input-wlabel name="nome" type="text"></app-input-wlabel>
+  <app-input-wlabel name="nome" type="text" (InputTyping)="onName($event)"></app-input-wlabel>
   <app-input-wlabel  name="senha" type="password" ></app-input-wlabel>
 </form>

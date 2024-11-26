@@ -1,15 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgStyle } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-input-wlabel',
   standalone: true,
-  imports: [NgStyle],
+  imports: [NgStyle, FormsModule],
   templateUrl: './input-wlabel.component.html',
   styleUrl: './input-wlabel.component.css',
 })
 export class InputWLabelComponent implements OnInit {
   InputStyles: Record<string, string> = {};
+  value = '';
   @Input() name = '';
   @Input() type = '';
   @Input() borderColor: null | string = null;
@@ -18,7 +20,7 @@ export class InputWLabelComponent implements OnInit {
   @Input() borderRadius: null | string = null;
   @Input() backgroundInput: null | string = null;
   @Input() fontColor: null | string = null;
-
+  @Output() InputTyping = new EventEmitter<string>();
   setInputStyles() {
     this.InputStyles = {
       'border-color': this.borderColor ? this.borderColor : '#333134',
@@ -30,6 +32,10 @@ export class InputWLabelComponent implements OnInit {
         : '#3e4a78',
       'color': this.fontColor ? this.fontColor : '#FFFFFF',
     };
+  }
+
+  onChangeNameValue(value:string){
+    this.InputTyping.emit(value);
   }
 
   ngOnInit(): void {
