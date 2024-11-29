@@ -1,5 +1,8 @@
 <span>{{name}}</span>
-<form class="">
+<form class="formCadAdmin">
   <app-input-wlabel name="nome" type="text" (InputTyping)="onName($event)"></app-input-wlabel>
-  <app-input-wlabel  name="senha" type="password" ></app-input-wlabel>
+  <div class="passwordContainer">
+    <app-input-wlabel name="senha" [type]="passwordType" ></app-input-wlabel>
+    <img src="assets/images/Vector.svg" alt="teste" (click)="changeViewPassword()">
+  </div>
 </form>

@@ -1,18 +1,12 @@
-.divLabelInput {
-  display: flex;
-  flex-direction: column;
+
+.labelGeneric{
+  display: block;
 }
 
-.divLabelInput label {
+.inputGeneric{
   width: 100%;
-  height: 100%;
 }
 
-.divLabelInput input {
-  width: 100%;
-  height: 100%;
-}
-
-.divLabelInput label::first-letter {
+.labelGeneric::first-letter {
   text-transform: capitalize;
 }

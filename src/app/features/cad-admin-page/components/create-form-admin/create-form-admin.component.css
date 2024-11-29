@@ -1,0 +1,23 @@
+.formCadAdmin {
+  margin-top: 1em;
+}
+
+.formCadAdmin label{
+  font-size: 0.5em;
+}
+
+.formCadAdmin input{
+  height: 2em;
+}
+.passwordContainer{
+  position:relative;
+}
+
+.passwordContainer img{
+  position: absolute;
+  right: 0;
+  top: 45%;
+  width: 15px;
+  height: 15px;
+  cursor:pointer;
+}

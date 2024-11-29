@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { NgStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -37,6 +37,10 @@ export class InputWLabelComponent implements OnInit {
   onChangeNameValue(value:string){
     this.InputTyping.emit(value);
   }
+
+  get formattedName(): string {
+  return this.name ? this.name.charAt(0).toUpperCase() + this.name.slice(1) : '';
+}
 
   ngOnInit(): void {
     this.setInputStyles();
