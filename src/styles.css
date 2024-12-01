@@ -5,3 +5,20 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --dark-blue: #2B3559;
+    --wave-blue: #3E4A78;
+    --blue-duck: #33C4CB;
+    --orange-frog: #F76B00;
+    --yellow-cat: #F7BC03;
+    --gray-ai:#D2E3F3;
+    --gray: #F5F9FC;
+    --white: #FFFFFF;
+
+  font-family: "Jura", serif;
+}
