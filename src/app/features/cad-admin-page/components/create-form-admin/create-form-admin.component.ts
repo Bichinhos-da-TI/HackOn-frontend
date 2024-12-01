@@ -13,7 +13,8 @@ import { FormBuilder, FormControl, ReactiveFormsModule, Validators } from '@angu
 })
 export class CreateFormAdminComponent {
   name = "";
-  passwordType:"password"|"text" = "password"
+  passwordType:"password"|"text" = "password";
+  confirmPasswordType:"password"|"text" = "password";
 
   constructor(private formBuilder:FormBuilder){
   }
@@ -57,6 +58,14 @@ export class CreateFormAdminComponent {
       this.passwordType = "text";
     }else if(this.passwordType === "text"){
       this.passwordType = "password";
+    }
+  }
+
+  changeViewConfirmPassword(){
+    if(this.confirmPasswordType === "password"){
+      this.confirmPasswordType = "text";
+    }else if(this.confirmPasswordType === "text"){
+      this.confirmPasswordType = "password";
     }
   }
 }
