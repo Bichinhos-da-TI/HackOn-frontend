@@ -1,17 +1,19 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgStyle } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputOutputType } from '../../types/InputOutput';
 
 @Component({
   selector: 'app-input-wlabel',
   standalone: true,
-  imports: [NgStyle, FormsModule],
+  imports: [NgStyle, FormsModule, ReactiveFormsModule],
   templateUrl: './input-wlabel.component.html',
   styleUrl: './input-wlabel.component.css',
 })
-export class InputWLabelComponent implements OnInit {
+export class InputWLabelComponent implements OnInit{
   InputStyles: Record<string, string> = {};
   value = '';
+  @Input() labelName = "";
   @Input() name = '';
   @Input() type = '';
   @Input() borderColor: null | string = null;
@@ -20,27 +22,22 @@ export class InputWLabelComponent implements OnInit {
   @Input() borderRadius: null | string = null;
   @Input() backgroundInput: null | string = null;
   @Input() fontColor: null | string = null;
-  @Output() InputTyping = new EventEmitter<string>();
+  @Output() InputTyping = new EventEmitter<InputOutputType>();
+
   setInputStyles() {
     this.InputStyles = {
       'border-color': this.borderColor ? this.borderColor : '#333134',
       'border-width': this.borderWidth ? this.borderWidth : '1px',
       'border-style': this.borderStyle ? this.borderStyle : 'solid',
       'border-radius': this.borderRadius ? this.borderRadius : '4px',
-      'background-color': this.backgroundInput
-        ? this.backgroundInput
-        : '#3e4a78',
+      'background-color': this.backgroundInput ? this.backgroundInput : '#3E4A78',
       'color': this.fontColor ? this.fontColor : '#FFFFFF',
     };
   }
 
-  onChangeNameValue(value:string){
-    this.InputTyping.emit(value);
+  onChangeNameValue(value:string, field:string){
+    this.InputTyping.emit({value, field});
   }
-
-  get formattedName(): string {
-  return this.name ? this.name.charAt(0).toUpperCase() + this.name.slice(1) : '';
-}
 
   ngOnInit(): void {
     this.setInputStyles();
