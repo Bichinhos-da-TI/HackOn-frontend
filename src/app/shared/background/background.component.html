@@ -1,23 +1,12 @@
-<main class="bg-dark-blue min-h-[98vh] w-[98vw] z-auto">
-  <ng-content class="z-20" />
-  <section class="fixed bottom-0 w-full">
-    <div class="relative flex flex-col items-center bottom-0">
-      <div
-        class="absolute h-[65vh] w-full bottom-0 bg-gradient-to-b from-gradient_cor_1 to-gradient_cor_2 -z-20"
-      ></div>
-      <div
-        class="-z-0 absolute bottom-0 rounded-t-[50%] 2xl:left-[-37vw] md:left-[-38vw] h-[100vw] w-[100vw] bg-dark-blue circle_background"
-      ></div>
-    </div>
-  </section>
+<main class="backgroundMain">
+  <ng-content />
 
-  <section
-    class="fixed overflow-hidden 2xl:right-[-460px] md:right-[-300px] rounded-2xl top-[150px] 2xl:w-[1310px] 2xl:h-[970px] md:w-[900px] md:h-[600px] xl:w-[1110px] xl: h-[770px]"
-  >
+  <img src="../../../assets/svg/wave.svg" alt="wave" class="waveBackground" />
+  <section class="sectionImage_Background">
     <img
       src="../../../assets/images/background.png"
       alt="background"
-      class="absolute top-[-40px] 2xl:left-[-154px] md:left-[-140px] image_background"
+      class="image_background"
     />
   </section>
 </main>

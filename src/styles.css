@@ -15,45 +15,15 @@
   clip-path: circle(50.4% at 50% 50%);
 }
 
-.image_background {
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 40%,
-    100% 100%,
-    100% 100%,
-    23.5% 100%,
-    21% 80%,
-    10.9% 0
-  );
-}
+:root {
+  --dark-blue: #2b3559;
+  --wave-blue: #3e4a78;
+  --blue-duck: #33c4cb;
+  --orange-frog: #f76b00;
+  --yellow-cat: #f7bc03;
+  --gray-ai: #d2e3f3;
+  --gray: #f5f9fc;
+  --white: #ffffff;
 
-@media screen and (min-width: 700px) {
-  .image_background {
-    clip-path: polygon(
-      0% 0%,
-      100% 0%,
-      100% 40%,
-      100% 100%,
-      100% 100%,
-      23.5% 100%,
-      26% 100%,
-      14.6% 0
-    );
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .image_background {
-    clip-path: polygon(
-      10% 0%,
-      100% 0%,
-      90% 40%,
-      90% 100%,
-      100% 100%,
-      23.5% 100%,
-      21% 80%,
-      10.9% 0
-    );
-  }
+  font-family: "Jura", serif;
 }

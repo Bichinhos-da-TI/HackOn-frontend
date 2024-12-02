@@ -1,0 +1,41 @@
+.backgroundMain {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-blue);
+  position: relative;
+}
+
+.sectionImage_Background {
+  position: fixed;
+  right: -10vw;
+  bottom: 0;
+  width: 70vw;
+  height: 80vh;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.image_background {
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  left: -9vw;
+  top: -10vh;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 40%,
+    100% 100%,
+    100% 100%,
+    23.5% 100%,
+    21% 80%,
+    10.9% 0
+  );
+}
+
+.waveBackground {
+  width: 80vw;
+  height: 80vh;
+  position: absolute;
+  bottom: 0;
+}

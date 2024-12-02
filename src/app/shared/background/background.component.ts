@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-background',
   standalone: true,
   imports: [],
+  styleUrl: './background.component.css',
   templateUrl: './background.component.html',
 })
 export class BackgroundComponent implements OnInit {
