@@ -3,12 +3,18 @@
   height: 100vh;
   background-color: var(--dark-blue);
   position: relative;
+  overflow: hidden;
+}
+
+.absoluteWrapper {
+  position: absolute;
+  bottom: 0;
+  right: -10vw;
+  width: fit-content;
 }
 
 .sectionImage_Background {
-  position: fixed;
-  right: -10vw;
-  bottom: 0;
+  position: relative;
   width: 70vw;
   height: 80vh;
   border-radius: 40px;
@@ -16,11 +22,12 @@
 }
 
 .image_background {
-  width: max-content;
-  height: max-content;
+  width: 70vw;
+  height: 80vh;
   position: absolute;
-  left: -9vw;
-  top: -10vh;
+  bottom: 0;
+  left: -8vw;
+
   clip-path: polygon(
     0% 0%,
     100% 0%,
