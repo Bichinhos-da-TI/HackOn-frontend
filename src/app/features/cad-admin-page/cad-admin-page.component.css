@@ -1,0 +1,28 @@
+.cadAdminDiv {
+  color: #ffffff;
+  max-height: 40em;
+  max-width: 30em;
+  padding: 0 5em;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 10;
+}
+
+.title {
+  font-size: 2em;
+  display: block;
+  margin-top: 3em;
+  margin-bottom: 0.8em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.subtitle a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #f7bc03;
+}

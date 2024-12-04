@@ -1,0 +1,3 @@
+<label class="labelGeneric" [for]="name">{{ labelName }}</label>
+<input class="inputGeneric" [ngModel]="value" (ngModelChange)="onChangeNameValue($event, name)" [type]="type" [ngStyle]="InputStyles" />
+

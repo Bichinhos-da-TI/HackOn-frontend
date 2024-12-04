@@ -1,3 +1,10 @@
+body {
+  background-color: #2b3559;
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 /* You can add global styles to this file, and also import other style files */
 @tailwind base;
 @tailwind components;
@@ -24,6 +31,5 @@
   --gray-ai: #d2e3f3;
   --gray: #f5f9fc;
   --white: #ffffff;
-
   font-family: "Jura", serif;
 }

@@ -1,0 +1,12 @@
+
+.labelGeneric{
+  display: block;
+}
+
+.inputGeneric{
+  width: 100%;
+}
+
+.labelGeneric::first-letter {
+  text-transform: capitalize;
+}
