@@ -1,13 +1,48 @@
-<form class="formCadAdmin" [formGroup]="formAdminRegister" (ngSubmit)="onSubmitAdminRegisterForm()">
-  <app-input-wlabel labelName="Nome"  name="name" type="text" (InputTyping)="onChangeValue($event)"></app-input-wlabel>
-  <app-input-wlabel labelName="Email"  name="email" type="text" (InputTyping)="onChangeValue($event)"></app-input-wlabel>
+<form
+  class="formCadAdmin"
+  [formGroup]="formAdminRegister"
+  (ngSubmit)="onSubmitAdminRegisterForm()"
+>
+  <app-input-wlabel
+    labelName="Nome"
+    name="name"
+    type="text"
+    (InputTyping)="onChangeValue($event)"
+  ></app-input-wlabel>
+
+  <app-input-wlabel
+    labelName="Email"
+    name="email"
+    type="text"
+    (InputTyping)="onChangeValue($event)"
+  ></app-input-wlabel>
+
   <div class="passwordContainer">
-    <app-input-wlabel labelName="Senha" name="password" [type]="passwordType" (InputTyping)="onChangeValue($event)"></app-input-wlabel>
-    <img src="assets/images/Vector.svg" alt="teste" (click)="changeViewPassword()">
+    <app-input-wlabel
+      labelName="Senha"
+      name="password"
+      [type]="passwordType"
+      (InputTyping)="onChangeValue($event)"
+    ></app-input-wlabel>
+    <img
+      src="assets/images/Vector.svg"
+      alt="teste"
+      (click)="changeViewPassword()"
+    />
   </div>
+
   <div class="passwordContainer">
-    <app-input-wlabel labelName="Confirme a Senha" name="confirmPassword" [type]="confirmPasswordType" (InputTyping)="onChangeValue($event)"></app-input-wlabel>
-    <img src="assets/images/Vector.svg" alt="teste" (click)="changeViewConfirmPassword()">
+    <app-input-wlabel
+      labelName="Confirme a Senha"
+      name="confirmPassword"
+      [type]="confirmPasswordType"
+      (InputTyping)="onChangeValue($event)"
+    ></app-input-wlabel>
+    <img
+      src="assets/images/Vector.svg"
+      alt="teste"
+      (click)="changeViewConfirmPassword()"
+    />
   </div>
   <!-- colocar aqui o componente de submit quando estiver pronto -->
   <button type="submit">submit</button>

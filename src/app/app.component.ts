@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { BackgroundComponent } from './shared/background/background.component';
-import { HeaderComponent } from './header/header.component';
+import { CadAdminPageComponent } from './features/cad-admin-page/cad-admin-page.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, BackgroundComponent],
+  imports: [CommonModule, RouterOutlet, CadAdminPageComponent],
   templateUrl: './app.component.html',
 })
 export class AppComponent {
