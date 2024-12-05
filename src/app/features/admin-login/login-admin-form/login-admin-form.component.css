@@ -1,0 +1,14 @@
+.formLoginAdmin {
+  margin-top: 1em;
+  width: 25em;
+}
+
+.formLoginAdmin label {
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+.formLoginAdmin input {
+  height: 3em;
+  width: 20em;
+}

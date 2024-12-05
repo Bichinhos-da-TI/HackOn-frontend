@@ -1,1 +1,21 @@
-<p>login-admin-form works!</p>
+<form
+  class="formLoginAdmin"
+  [formGroup]="formAdminLogin"
+  (ngSubmit)="onSubmitLoginForm()"
+>
+  <app-input-wlabel
+    labelName="Login"
+    type="text"
+    name="name"
+    (InputTyping)="onChangeValue($event)"
+  ></app-input-wlabel>
+
+  <app-wrapper-showpassword (ClickEmit)="changeViewPassword($event)">
+    <app-input-wlabel
+      labelName="Senha"
+      [type]="passwordType"
+      name="password"
+      (InputTyping)="onChangeValue($event)"
+    ></app-input-wlabel
+  ></app-wrapper-showpassword>
+</form>

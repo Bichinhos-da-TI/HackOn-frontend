@@ -1,0 +1,14 @@
+.wrapper {
+  width: 30em;
+  height: 40em;
+  height: max-content;
+  color: #ffffff;
+  padding: 0 5em;
+  position: relative;
+  z-index: 10;
+}
+
+.subtitle a {
+  color: var(--yellow-cat);
+  cursor: pointer;
+}

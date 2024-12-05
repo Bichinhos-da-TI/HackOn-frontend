@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgStyle } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InputOutputType } from '../../types/InputOutput';
+import { InputOutputType } from '../../core/types/InputOutput';
 
 @Component({
   selector: 'app-input-wlabel',
@@ -10,10 +10,10 @@ import { InputOutputType } from '../../types/InputOutput';
   templateUrl: './input-wlabel.component.html',
   styleUrl: './input-wlabel.component.css',
 })
-export class InputWLabelComponent implements OnInit{
+export class InputWLabelComponent implements OnInit {
   InputStyles: Record<string, string> = {};
   value = '';
-  @Input() labelName = "";
+  @Input() labelName = '';
   @Input() name = '';
   @Input() type = '';
   @Input() borderColor: null | string = null;
@@ -30,13 +30,15 @@ export class InputWLabelComponent implements OnInit{
       'border-width': this.borderWidth ? this.borderWidth : '1px',
       'border-style': this.borderStyle ? this.borderStyle : 'solid',
       'border-radius': this.borderRadius ? this.borderRadius : '4px',
-      'background-color': this.backgroundInput ? this.backgroundInput : '#3E4A78',
+      'background-color': this.backgroundInput
+        ? this.backgroundInput
+        : '#3E4A78',
       'color': this.fontColor ? this.fontColor : '#FFFFFF',
     };
   }
 
-  onChangeNameValue(value:string, field:string){
-    this.InputTyping.emit({value, field});
+  onChangeNameValue(value: string, field: string) {
+    this.InputTyping.emit({ value, field });
   }
 
   ngOnInit(): void {
