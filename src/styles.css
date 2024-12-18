@@ -13,14 +13,14 @@ body {
 @layer components {
 }
 
-.bodyOverflowBackground {
+/* .bodyOverflowBackground {
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
 .circle_background {
   clip-path: circle(50.4% at 50% 50%);
-}
+} */
 
 :root {
   --dark-blue: #2b3559;

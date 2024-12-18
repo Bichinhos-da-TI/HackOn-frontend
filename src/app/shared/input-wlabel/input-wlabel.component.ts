@@ -20,6 +20,7 @@ export class InputWLabelComponent implements OnInit {
   @Input() borderWidth: null | string = null;
   @Input() borderStyle: null | string = null;
   @Input() borderRadius: null | string = null;
+  @Input() placeholder: string = "";
   @Input() backgroundInput: null | string = null;
   @Input() fontColor: null | string = null;
   @Output() InputTyping = new EventEmitter<InputOutputType>();

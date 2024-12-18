@@ -1,0 +1,30 @@
+.containerPage {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.containerForm {
+  width: 95%;
+  height: 90%;
+  background-color: #222b49;
+  border-top-left-radius: 14px;
+  color: #a2a2a2;
+  color: #fff;
+  /*vou deixar position absolute mas quando tiver os componentes de sidebar tem que trocar */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5rem;
+}
+
+.route span {
+  margin-right: 0.7rem;
+}
+.route a {
+  color: var(--yellow-cat);
+}
+
+.containerForm h1 {
+  color: #fff;
+  margin-bottom: 4rem;
+}

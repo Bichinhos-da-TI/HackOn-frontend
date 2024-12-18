@@ -1,0 +1,61 @@
+<form class="formCadEvent">
+  <div class="formInputs">
+    <div class="wrapperInputCustom">
+      <app-input-wlabel
+        labelName="Nome do Evento"
+        name="nome"
+        borderColor="#fff"
+      ></app-input-wlabel>
+    </div>
+
+    <div class="formDate">
+      <section>
+        <div class="wrapperInputCustom">
+          <app-input-wlabel
+            placeholder="DD/MM/AAAA"
+            labelName="Data do Evento"
+            name="nome"
+            borderColor="#fff"
+            type="date"
+          ></app-input-wlabel>
+        </div>
+      </section>
+      <section>
+        <div class="wrapperInputCustom">
+          <app-input-wlabel
+            placeholder="00:00"
+            labelName="Hora do Evento"
+            name="nome"
+            borderColor="#fff"
+            fontColor="#fff"
+            type="time"
+          ></app-input-wlabel>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrapperInputCustom">
+      <label for="categoria">Categoria do evento</label>
+      <select name="categoria">
+        <option>CATEGORIA 1</option>
+        <option>CATEGORIA 2</option>
+        <option>CATEGORIA 3</option>
+      </select>
+    </div>
+
+    <div class="wrapperInputCustom">
+      <label for="local">Local do evento</label>
+      <select name="local">
+        <option>LOCAL 1</option>
+        <option>LOCAL 2</option>
+        <option>LOCAL 3</option>
+      </select>
+    </div>
+
+    <div class="wrapperInputCustom">
+      <label for="description">Descrição do evento</label>
+      <textarea name="description"></textarea>
+    </div>
+  </div>
+  <div class="formImg">f</div>
+</form>
