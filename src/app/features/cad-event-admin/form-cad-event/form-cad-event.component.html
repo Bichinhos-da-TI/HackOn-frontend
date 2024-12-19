@@ -1,10 +1,15 @@
-<form class="formCadEvent">
+<form
+  class="formCadEvent"
+  [formGroup]="formEventRegister"
+  (ngSubmit)="onSubmitEventRegisterForm()"
+>
   <div class="formInputs">
     <div class="wrapperInputCustom">
       <app-input-wlabel
         labelName="Nome do Evento"
-        name="nome"
+        name="name"
         borderColor="#fff"
+        (InputTyping)="onChangeValue($event)"
       ></app-input-wlabel>
     </div>
 
@@ -14,7 +19,7 @@
           <app-input-wlabel
             placeholder="DD/MM/AAAA"
             labelName="Data do Evento"
-            name="nome"
+            name="date"
             borderColor="#fff"
             type="date"
           ></app-input-wlabel>
@@ -25,7 +30,7 @@
           <app-input-wlabel
             placeholder="00:00"
             labelName="Hora do Evento"
-            name="nome"
+            name="time"
             borderColor="#fff"
             fontColor="#fff"
             type="time"
@@ -36,7 +41,7 @@
 
     <div class="wrapperInputCustom">
       <label for="categoria">Categoria do evento</label>
-      <select name="categoria">
+      <select name="category">
         <option>CATEGORIA 1</option>
         <option>CATEGORIA 2</option>
         <option>CATEGORIA 3</option>
@@ -56,6 +61,10 @@
       <label for="description">Descrição do evento</label>
       <textarea name="description"></textarea>
     </div>
+    <button type="submit" class="submit">submit</button>
   </div>
-  <div class="formImg">f</div>
+  <div class="formImgContainer">
+    <label for="image"><img src="assets/svg/camera.svg" alt="camera" /></label>
+    <input name="image" id="image" type="file" class="inputImg" />
+  </div>
 </form>
