@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { InputOutputType } from '../../../core/types/InputOutput';
+import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-form-cad-event',
@@ -31,6 +32,8 @@ export class FormCadEventComponent {
 
   onChangeValue(input: InputOutputType) {
     if (input.field === 'name') this.nome.setValue(input.value);
+    if (input.field === 'date') this.date.setValue(input.value);
+    if (input.field === 'time') this.time.setValue(input.value);
   }
 
   get nome() {
@@ -58,6 +61,7 @@ export class FormCadEventComponent {
   }
 
   onSubmitEventRegisterForm() {
+    console.log(this.formEventRegister.value);
     //aqui vai ficar a logica para mandar o formulario quando tiver o service do mesmo
   }
 }

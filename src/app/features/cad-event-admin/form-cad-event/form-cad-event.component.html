@@ -19,9 +19,10 @@
           <app-input-wlabel
             placeholder="DD/MM/AAAA"
             labelName="Data do Evento"
-            name="date"
             borderColor="#fff"
+            name="date"
             type="date"
+            (InputTyping)="onChangeValue($event)"
           ></app-input-wlabel>
         </div>
       </section>
@@ -30,10 +31,11 @@
           <app-input-wlabel
             placeholder="00:00"
             labelName="Hora do Evento"
-            name="time"
             borderColor="#fff"
             fontColor="#fff"
+            name="time"
             type="time"
+            (InputTyping)="onChangeValue($event)"
           ></app-input-wlabel>
         </div>
       </section>
@@ -41,7 +43,7 @@
 
     <div class="wrapperInputCustom">
       <label for="categoria">Categoria do evento</label>
-      <select name="category">
+      <select formControlName="category">
         <option>CATEGORIA 1</option>
         <option>CATEGORIA 2</option>
         <option>CATEGORIA 3</option>
@@ -50,7 +52,7 @@
 
     <div class="wrapperInputCustom">
       <label for="local">Local do evento</label>
-      <select name="local">
+      <select formControlName="local">
         <option>LOCAL 1</option>
         <option>LOCAL 2</option>
         <option>LOCAL 3</option>
@@ -59,12 +61,12 @@
 
     <div class="wrapperInputCustom">
       <label for="description">Descrição do evento</label>
-      <textarea name="description"></textarea>
+      <textarea formControlName="description"></textarea>
     </div>
     <button type="submit" class="submit">submit</button>
   </div>
   <div class="formImgContainer">
     <label for="image"><img src="assets/svg/camera.svg" alt="camera" /></label>
-    <input name="image" id="image" type="file" class="inputImg" />
+    <input formControlName="image" id="image" type="file" class="inputImg" />
   </div>
 </form>

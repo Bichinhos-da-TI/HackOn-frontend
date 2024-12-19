@@ -1,4 +1,4 @@
 export type InputOutputType = {
-  value:string,
-  field:string,
-}
+  value: string | Date;
+  field: string;
+};
