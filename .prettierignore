@@ -1,1 +1,2 @@
 tailwind.config.js
+/src/app/shared/input-wlabel/input-wlabel.component.ts

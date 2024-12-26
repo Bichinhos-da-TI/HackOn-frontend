@@ -1,17 +1,14 @@
-.cadAdminDiv {
-  color: #ffffff;
-  max-height: 40em;
-  max-width: 30em;
-  padding: 0 5em;
-}
-
 .wrapper {
+  width: 30em;
+  height: 40em;
+  height: max-content;
+  color: #ffffff;
+  padding: 0 5em;
   position: relative;
   z-index: 10;
 }
 
 .subtitle a {
-  text-decoration: none;
+  color: var(--yellow-cat);
   cursor: pointer;
-  color: #f7bc03;
 }

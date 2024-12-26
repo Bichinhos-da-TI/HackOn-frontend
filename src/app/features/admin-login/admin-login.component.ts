@@ -1,19 +1,19 @@
-import { Component } from '@angular/core';
-import { CreateFormAdminComponent } from './components/create-form-admin/create-form-admin.component';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { BackgroundComponent } from '../../shared/background/background.component';
 import { HeaderComponent } from '../../shared/header/header.component';
+import { LoginAdminFormComponent } from './login-admin-form/login-admin-form.component';
 import { TitleComponent } from '../../shared/title/title.component';
 
 @Component({
-  selector: 'app-cad-admin-page',
+  selector: 'app-admin-login',
   standalone: true,
   imports: [
-    CreateFormAdminComponent,
     BackgroundComponent,
     HeaderComponent,
+    LoginAdminFormComponent,
     TitleComponent,
   ],
-  templateUrl: './cad-admin-page.component.html',
-  styleUrl: './cad-admin-page.component.css',
+  templateUrl: './admin-login.component.html',
+  styleUrl: './admin-login.component.css',
 })
-export class CadAdminPageComponent {}
+export class AdminLoginComponent {}

@@ -1,14 +1,14 @@
-.formCadAdmin {
+.formLoginAdmin {
   margin-top: 1em;
   width: 25em;
 }
 
-.formCadAdmin label {
+.formLoginAdmin label {
   margin-top: 1em;
   margin-bottom: 0.3em;
 }
 
-.formCadAdmin input {
+.formLoginAdmin input {
   height: 3em;
   width: 20em;
 }
