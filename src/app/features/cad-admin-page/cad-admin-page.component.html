@@ -1,11 +1,11 @@
-<app-background>
+<app-background
+  ><app-header></app-header>
   <div class="wrapper">
-    <app-header></app-header>
     <div class="cadAdminDiv">
-      <span class="title">Cadastro de Admin</span>
-      <span class="subtitle"
-        >Já tem cadastro ?<a href="#"> Entrar na conta</a></span
-      >
+      <app-title title="Cadastro de Admin" />
+      <span class="subtitle">
+        Já tem cadastro ?<a href="/admin/login"> Entrar na conta</a>
+      </span>
       <app-create-form-admin />
     </div>
   </div>
